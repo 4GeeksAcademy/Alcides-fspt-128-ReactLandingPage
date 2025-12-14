@@ -1,30 +1,36 @@
 
+const Carousel = (props) => {
+  return (
+    <div
+      id="carouselExampleFade"
+      className="carousel slide carousel-fade"
+      data-bs-ride="carousel"
+    >
+      <div className="carousel-inner">
+        {props.slides}
+      </div>
 
-export const Carousel = (props) => {
+      <button
+        className="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleFade"
+        data-bs-slide="prev"
+      >
+        <span className="carousel-control-prev-icon" />
+        <span className="visually-hidden">Previous</span>
+      </button>
 
-    //Componente
-    return (
-        <>
-                    
-                        <div className="carousel-item active">
-                            <img
-                                src={props.slides.imagenes}
-                                className="d-block w-100"
-                                style={{
-                                    height: "420px",
-                                    objectFit: "contain",
-                                    objectPosition: "center",
-                                }}
-                                alt={props.imagenes.nombre}
-                            />
-                        </div>
-                    
-
-                    
-                
-            
-        </>
-
-    );
+      <button
+        className="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleFade"
+        data-bs-slide="next"
+      >
+        <span className="carousel-control-next-icon" />
+        <span className="visually-hidden">Next</span>
+      </button>
+    </div>
+  );
 };
+
 export default Carousel;
