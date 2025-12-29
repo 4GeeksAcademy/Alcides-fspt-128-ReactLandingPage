@@ -11,6 +11,8 @@ import valorant from "../../img/Valorant.jpg";
 import Navbar from "./Navbar";
 import Carousel from "./Carousel";
 import { Card } from "./Card";
+import Footer from "./Footer";
+
 
 const Home = () => {
 	const images = [wukong, image2, image3];
@@ -100,6 +102,7 @@ const Home = () => {
 					</div>
 				</div>
 			</div>
+			<Footer />
 		</>
 	);
 };
